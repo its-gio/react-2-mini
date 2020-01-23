@@ -15,10 +15,11 @@ export default class TextContainer extends Component {
   }
 
   render() {
+    const styles = { color: this.props.styles.color  }
     return (
       <div className="textContainer">
         <textarea
-          // style={  }
+          style={ styles }
           onChange={this.updateText}
           value={this.state.text}
           placeholder="Start typing your thoughts here!"

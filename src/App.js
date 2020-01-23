@@ -21,6 +21,9 @@ class App extends Component {
   }
 
   // updateColor
+  handleColorChange = (e) => {
+    this.setState({ color: e.target.value })
+  }
 
   // updateSize
 
@@ -39,11 +42,11 @@ class App extends Component {
           {/* Render EditToggle */}
           <EditToggle handleEditStatus={this.handleEditStatus} />
           {/* Render ColorChanger */}
-          <ColorChanger disabled={this.state.disabled} />
+          <ColorChanger disabled={this.state.disabled} handleColorChange={this.handleColorChange} />
           {/* Render SizeChanger */}
           {/* Render FamilyChanger */}
         </div>
-        <div className="textArea"><TextContainer /></div>
+        <div className="textArea"><TextContainer styles={this.state} /></div>
       </div>
     );
   }
