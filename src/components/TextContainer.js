@@ -8,7 +8,7 @@ export default class TextContainer extends Component {
     };
   }
 
-  updateText(e) {
+  updateText = (e) => {
     this.setState({
       text: e.target.value,
     });
