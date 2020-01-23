@@ -31,6 +31,9 @@ class App extends Component {
   }
 
   // updateFamily
+  handleFontFamilyChange = (e) => {
+    this.setState({ fontFamily: e.target.value })
+  }
 
   // updateEditStatus
   handleEditStatus = (e) => {
@@ -49,6 +52,7 @@ class App extends Component {
           {/* Render SizeChanger */}
           <SizeChanger disabled={this.state.disabled} handleFontSizeChange={this.handleFontSizeChange} />
           {/* Render FamilyChanger */}
+          <FamilyChanger disabled={this.state.disabled} handleFontFamilyChange={this.handleFontFamilyChange} />
         </div>
         <div className="textArea"><TextContainer styles={this.state} /></div>
       </div>
